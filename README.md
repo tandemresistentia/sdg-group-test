@@ -7,7 +7,6 @@ A modern, interactive dashboard for visualizing global population data by region
 - Global population overview with interactive visualizations
 - Region/continent-specific population data
 - Population filtering capabilities
-- Responsive design with dark/light mode support
 - Interactive data visualization using treemap charts
 - Smooth animations and transitions
 - Data table view option
@@ -32,7 +31,7 @@ A modern, interactive dashboard for visualizing global population data by region
 1. Clone the repository:
 ```bash
 git clone https://github.com/tandemresistentia/sdg-group-test.git
-cd sdg-test
+cd sdg-group-test
 ```
 
 2. Install dependencies:
