@@ -1,7 +1,7 @@
 import { usePopulationStore } from '@/store/population';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/utils';
 import { Globe, Map, Navigation } from 'lucide-react';
 import { useEffect, useCallback } from 'react';
 import { REGIONS, variants } from '@/constants/constants';

@@ -1,7 +1,5 @@
+import { BASE_URL, FIELDS } from '@/constants/constants';
 import { Country } from '@/types/api';
-
-const BASE_URL = 'https://restcountries.com/v3.1';
-const FIELDS = 'fields=name,population,region,subregion,flags';
 
 async function fetchApi<T>(endpoint: string): Promise<T> {
   const response = await fetch(`${BASE_URL}${endpoint}`);

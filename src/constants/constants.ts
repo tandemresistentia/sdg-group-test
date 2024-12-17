@@ -28,3 +28,7 @@ export const variants = {
 
 // Region constants
 export const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+
+//API
+export const BASE_URL = 'https://restcountries.com/v3.1';
+export const FIELDS = 'fields=name,population,region,subregion,flags';

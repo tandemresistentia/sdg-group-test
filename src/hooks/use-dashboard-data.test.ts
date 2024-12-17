@@ -4,6 +4,7 @@ import { useDashboardData } from './use-dashboard-data';
 import { useCountries } from '@/hooks/use-countries';
 import { usePopulationStore } from '@/store/population';
 import type { Country } from '@/types/api';
+import { SWRResponse } from 'swr';
 
 vi.mock('@/hooks/use-countries');
 vi.mock('@/store/population');
@@ -34,11 +35,14 @@ const mockCountries: Country[] = [
 
 describe('useDashboardData', () => {
   beforeEach(() => {
-    vi.mocked(useCountries).mockReturnValue({ 
-      data: mockCountries, 
-      isLoading: false, 
-      error: null 
-    });
+    vi.mocked(useCountries).mockReturnValue({
+      data: mockCountries,
+      isLoading: false,
+      error: null,
+      mutate: vi.fn(),
+      isValidating: false
+    } as unknown as SWRResponse<Country[], any>);
+
     vi.mocked(usePopulationStore).mockReturnValue(0);
   });
 
